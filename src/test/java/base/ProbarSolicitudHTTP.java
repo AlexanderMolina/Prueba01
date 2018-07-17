@@ -17,7 +17,6 @@ public class ProbarSolicitudHTTP{
 	private TestRestTemplate restTemplate;
 	@Test
 	public void verificarElMensajePorDefectoDelServidor()throws Exception{
-		(new java.io.PrintStream(new java.io.FileOutputStream(new java.io.File("D:\\Desarrollo\\CEIBA\\log.txt")))).println(this.restTemplate.getForObject("http://localhost:"+puerto+"/",String.class));
-		assertThat(this.restTemplate.getForObject("http://localhost:"+puerto+"/",String.class)).contains("XXX");
+		assertThat(this.restTemplate.getForObject("http://localhost:"+puerto+"/",String.class)).contains("Servidor activo");
 	}	
 }

@@ -21,7 +21,7 @@ public class PruebaWebMock{
 	private Servicio servicio;
 	@Test
 	public void pruebaMensajeDelServicio()throws Exception{
-		when(servicio.mostrarMensaje()).thenReturn("Hello Mock");
-		this.mockMvc.perform(get("/servidor")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("Hello Mock")));
+		when(servicio.mostrarMensaje()).thenReturn("Mensaje del servicio");
+		this.mockMvc.perform(get("/servidor")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("Mensaje del servicio")));
 	}
 }

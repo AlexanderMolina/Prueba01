@@ -19,6 +19,6 @@ public class PruebaAplicacion{
 	private MockMvc mockMvc;
 	@Test
 	public void debeRetornarMensajePorDefecto()throws Exception{
-		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("Hello World")));
+		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk()).andExpect(content().string(containsString("Servidor activo")));
 	}
 }
